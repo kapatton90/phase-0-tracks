@@ -1,0 +1,17 @@
+<snippet>
+ <content><![CDATA[
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ 	<nav>
+ 	<a hef=""></a>
+ 	</nav>
+ </body>
+</html>
+]]></content>
+ <tabTrigger>nav</tabTrigger>
+ <scope>text.html</scope>
+</snippet>	
