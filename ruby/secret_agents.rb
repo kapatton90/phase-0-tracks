@@ -68,6 +68,26 @@ end
 
 #encrypt("zed zed")
 #trying out encrpt method
-decrypt("afe afe")
+#decrypt("afe afe")
 #trying out decrpyt method
+#(decrypt(encrypt)"swordfish"))
 
+#obtain agent's name
+print "Enter the first letter of your secret agent name."
+agent_name = gets.chomp
+
+#ask the secret agent if they would like to encrypt or decrypt their password
+print "Hello Agent #{agent_name}, would you like to encrypt or decrypt your password?(encrypt/decrypt)"
+answer = gets.chomp
+
+#ask for password
+print "What is your password?"
+password = gets.chomp
+
+if answer = "encrypt"
+	encrypt("#{password}")
+elsif answer = "decrypt"
+	decrypt("#{password}")
+else
+	puts "This message will now self-destruct."
+end	
