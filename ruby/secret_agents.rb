@@ -1,44 +1,61 @@
+#create encryption method
+#find the index of letters in the message
 def encrypt (message)
   index = 0 
   
-  
+    
 	while index < message.length 
 	#figure out the length of the message
-  	message[index] = message[index].next! 
-  	#figure out the index of the message and then change it to the next index placement
-   	index += 1
-   	#counter to ensure no infinite loops   
-  	end
-  	message
+
+		if message[index] == "z"
+			message[index] = "a"
+			#in case of z in message
+		else	
+  			message[index] = message[index].next! 
+  		#find index of each letter and increase by one
+   		
+   		index += 1
+   		#counter to ensure no infinite loops   
+  		end
+  	end	
+  	return message
 end
 
-puts encrypt("secret message")
+
+#find the index of each letter of the encrypted message to prepare for decryption 
+def placement(message_letters)
+	
+	#alphabet string to check against letters of message
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	a = alphabet.index(message_letters)
+	
+	#decrease the index of message letter by one
+	decrease_a = a - 1
+
+	#new index placement of message letter
+	alphabet[decrease_a]
+
+end
 
 
-
+#create decryption method
 def decrypt(message)
-
-placement = "abcdefghijklmnopqrstuvwxyz".index("message")
-
-placement = placement - 1
-puts placement
-
-end
-
-
-
-def decrypt(message) 
 	index = 0
 
 	while index < message.length
-		p message[index]
+		#calling on my placement method to go back an index on each letter	
+		message[index] = placement(message[index]
+
 		index += 1
-	end
-  	
-	def decrypt_2(message)
-		placement = "abcdefghijklmnopqrstuvwxyz".index("message")
-		placement + 1
-	
-	
 	end	
-end
+
+	return message
+end	
+
+
+encrypt("hello")
+#trying out encrpt method
+decrypt("hello")
+#trying out decrpyt method
+
+
