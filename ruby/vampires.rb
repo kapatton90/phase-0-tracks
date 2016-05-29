@@ -2,7 +2,11 @@ print "How many employees will you be processing today?"
 employees = gets.chomp.to_i
 
 #Run program until all employees have been processed.
-
+counter = -1
+until counter >= employees
+	puts 
+	counter += 1
+end	
 
 print "What is your name?"
 name = gets.chomp
@@ -32,11 +36,23 @@ def real_age
 	return real_age	
 end
 
-print "Our company cafeteria serves garlic bread. Should we order you some?"
+print "Our company cafeteria serves garlic bread. Should we order you some?(Yes/No)"
 garlic_bread = gets.chomp
 
-puts "Would you like to enroll in the company's health insurance?"
+if garlic_bread == "Yes"
+	true
+else
+	false
+end	
+
+puts "Would you like to enroll in the company's health insurance?(Yes/No)"
 health_insurance = gets.chomp
+
+if health_insurance == "Yes"
+	true
+else
+	false
+end	
 
 puts "Do you have any allergies?"
 allergies = gets.chomp
