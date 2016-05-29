@@ -89,5 +89,5 @@ if answer == "encrypt"
 elsif answer == "decrypt"
 	print decrypt("#{password}")
 else
-	puts "This message will now self-destruct."
+	print "This message will now self-destruct."
 end	

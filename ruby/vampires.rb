@@ -2,15 +2,15 @@ print "How many employees will you be processing today?"
 employees = gets.chomp.to_i
 
 #Run program until all employees have been processed.
-Loop times = employees
+
 
 print "What is your name?"
 name = gets.chomp
 
-if name = "Drake Cula" || "Tu Fang"
-	puts "Definitely a Vampire."
+if name == "Drake Cula" || name == "Tu Fang"
+	print "Definitely a Vampire."
 else
-	puts "Results inconclusive."
+	print "Results inconclusive."
 end		
 
 print "How old are you?"
@@ -42,26 +42,26 @@ puts "Do you have any allergies?"
 allergies = gets.chomp
 
 #Loop for multiple allergies
-Until allergies = "done"
+#Until allergies = "done"
 
 
 
-wolves_like_sunshine = true
-wolves_like_garlic = true
-vampires_like_sunshine = false
-vampires_like_garlic = false
+wolves_like_sunshine == true
+wolves_like_garlic == true
+vampires_like_sunshine == false
+vampires_like_garlic == false
 
-if age == true && garlic_bread == true
-	puts "Probably not a vampire."
-elsif age == false && garlic_bread == false	
-	puts "Probably a vampire."
-elsif age == false && garlic_bread == false && insurance == false
-	puts "Almost certainly a vampire."
-elsif name == Drake Cula || name == Tu Fang
-	puts "Definitely a vampire."		
+if real_age == true && garlic_bread == true
+	print "Probably not a vampire."
+elsif real_age == false && garlic_bread == false	
+	print"Probably a vampire."
+elsif real_age == false && garlic_bread == false && insurance == false
+	print "Almost certainly a vampire."
+elsif name == "Drake Cula" || name == "Tu Fang"
+	print "Definitely a vampire."		
 else
-	puts "Results inconclusive."	
+	print "Results inconclusive."	
 end	
 
 #Right before program exits
-print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+#print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
