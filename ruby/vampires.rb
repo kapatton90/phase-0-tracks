@@ -1,36 +1,50 @@
-puts "How many employees will you be processing today?"
+print "How many employees will you be processing today?"
 employees = gets.chomp.to_i
 
 #Run program until all employees have been processed.
 Loop times = employees
 
-puts "What is your name?"
+print "What is your name?"
 name = gets.chomp
 
 if name = "Drake Cula" || "Tu Fang"
 	puts "Definitely a Vampire."
+else
+	puts "Results inconclusive."
+end		
 
-puts" How old are you?
+print "How old are you?"
 age = gets.chomp.to_i
 
-puts "What year were you born?"
+print "What year were you born?"
 year_born = gets.chomp.to_i
 
 current_year = 2016
 
+def real_age
+
 #Check to see if their age and year born make sense.
-if year_born == current_year - age || year_born == current_year - (age +1)
-	real_age = true
-else
-	real_age = false
-end		
+	if year_born == current_year - age || year_born == current_year - (age +1)
+		real_age = true
+	else
+		real_age = false
+	end	
+	return real_age	
+end
 
-
-puts "Our company cafeteria serves garlic bread. Should we order you some?"
+print "Our company cafeteria serves garlic bread. Should we order you some?"
 garlic_bread = gets.chomp
 
 puts "Would you like to enroll in the company's health insurance?"
 health_insurance = gets.chomp
+
+puts "Do you have any allergies?"
+allergies = gets.chomp
+
+#Loop for multiple allergies
+Until allergies = "done"
+
+
 
 wolves_like_sunshine = true
 wolves_like_garlic = true
@@ -48,3 +62,6 @@ elsif name == Drake Cula || name == Tu Fang
 else
 	puts "Results inconclusive."	
 end	
+
+#Right before program exits
+print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
