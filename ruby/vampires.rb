@@ -55,11 +55,15 @@ else
 end	
 
 puts "Do you have any allergies?"
-allergies = gets.chomp
-
 #Loop for multiple allergies
-#Until allergies = "done"
-
+while allergies = gets.chomp
+	case allergies
+	when allergies = ""
+	puts "Do you have any allergies?"
+	break
+	else allergies == "done"
+	end
+end
 
 
 wolves_like_sunshine == true
