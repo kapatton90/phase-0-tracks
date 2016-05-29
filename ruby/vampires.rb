@@ -1,14 +1,24 @@
+puts "How many employees will you be processing today?"
+employees = gets.chomp.to_i
+
+#Run program until all employees have been processed.
+Loop times = employees
+
 puts "What is your name?"
 name = gets.chomp
 
+if name = "Drake Cula" || "Tu Fang"
+	puts "Definitely a Vampire."
+
 puts" How old are you?
-age = gets.chomp
+age = gets.chomp.to_i
 
 puts "What year were you born?"
-year_born = gets.chomp
+year_born = gets.chomp.to_i
 
 current_year = 2016
 
+#Check to see if their age and year born make sense.
 if year_born == current_year - age || year_born == current_year - (age +1)
 	real_age = true
 else
