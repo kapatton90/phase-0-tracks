@@ -1,8 +1,8 @@
 puts "How many employees will you be processing today?"
-#Run program until all employees have been processed.
-times = -1
-loop do
 	employees = gets.chomp.to_i
+#Run program until all employees have been processed.
+times = 0
+loop do
 	times == employees
 	puts "What is your name?"
 	name = gets.chomp
@@ -78,7 +78,8 @@ loop do
 		puts "Definitely a vampire."		
 	else
 		puts "Results inconclusive."	
-	end	
+	end
+	break
 end
 	
 #Right before program exits
