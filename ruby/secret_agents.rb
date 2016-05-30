@@ -4,20 +4,20 @@
 
 def encrypt(message)
   index = 0 
-  
+  new_message = ""
     
 	while index < message.length 
 	#figure out the length of the message
 			
 		  #in case of z in message
 		  if message[index] == "z"
-		  	 message[index] = "a"
+		  	 new_message[index] = "a"
 			
 		#keeping the spaces
 		elsif message[index] == " "	
-		 	  message[index] = " "
+		 	  new_message[index] = " "
 		 else	
-  			message[index] = message[index].next! 
+  			new_message[index] = message[index].next! 
   		#find index of each letter and increase by one
    		
    		
@@ -25,7 +25,7 @@ def encrypt(message)
   		end
   	index += 1	
   	end	
-  	return message
+  	return new_message
 end
 
 
@@ -40,8 +40,8 @@ def placement(message_letters)
 	decrease_a = a - 1
 
 	#new index placement of message letter
-	alphabet[decrease_a]
-
+	return alphabet[decrease_a]
+	#maybe return?
 end
 
 
@@ -84,10 +84,10 @@ answer = gets.chomp
 print "What is your password?"
 password = gets.chomp
 
-if answer = "encrypt"
-	encrypt("#{password}")
-elsif answer = "decrypt"
-	decrypt("#{password}")
+if answer == "encrypt"
+	print encrypt("#{password}")
+elsif answer == "decrypt"
+	print decrypt("#{password}")
 else
-	puts "This message will now self-destruct."
+	print "This message will now self-destruct."
 end	
