@@ -1,6 +1,14 @@
 # Jessica Bohn & Kimberly Patton
 # 06/03/2016
 
+def method_of_arrays(array, y)
+	new_array = array << y
+end
+
+def build_array(x, y, z)
+	array = [x, y, z]
+end	
+
 books = []
 p books
 
@@ -23,3 +31,8 @@ colors = ["blue", "pink", "green"]
 
 books_and_colors = books + colors
 p books_and_colors
+
+p build_array(1, "two", nil)
+
+
+p method_of_arrays([], "Hi")
