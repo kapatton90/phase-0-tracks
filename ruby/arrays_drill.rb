@@ -36,3 +36,5 @@ p build_array(1, "two", nil)
 
 
 p method_of_arrays([], "Hi")
+p method_of_arrays([3, 5], 1)
+p method_of_arrays(["Hello"], 7)
