@@ -25,3 +25,14 @@ pet_names = {
 p list_of_animals.each {|animal| puts animal}
 
 p pet_names.each {|name, animal| puts "I have a pet #{animal} and its name is #{name}."}
+
+list_of_animals.map! do |animal|
+	puts animal
+	animal.upcase
+end
+
+puts "After .map say:"
+p list_of_animals	
+
+
+ 
