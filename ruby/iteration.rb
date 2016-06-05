@@ -8,6 +8,20 @@ def block_method
 	yield(name1, name2) 
 end		
 
-#p block_method("Jessica", "Kimberly")
 
 p block_method {|name1, name2| puts "Hi there #{name1} and #{name2}!"}
+
+list_of_animals = ["hamster", "rabbit", "cat", "horse", "unicorn"]
+
+
+pet_names = {
+	"Bear" => "hamster",
+	"Lambda" => "rabbit",
+	"Catsby" => "cat",
+	"Zeus" => "horse",
+	"Athena" => "unicorn"
+}
+
+p list_of_animals.each {|animal| puts animal}
+
+p pet_names.each {|name, animal| puts "I have a pet #{animal} and its name is #{name}."}
