@@ -24,3 +24,5 @@ p grocery_store["bakery"][1]
 p grocery_store["bakery"].insert(2, "cakes")
 # remove and return the last element in the meat array
 p grocery_store["meat"].pop 
+#insert two more categories to the meat array
+p grocery_store["meat"].insert(2, "red meat", "seafood")
