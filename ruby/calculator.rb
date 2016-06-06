@@ -9,12 +9,16 @@ p calculate(3,'-', 2)
 p calculate(4, '*', 2)
 p calculate(6, '/', 3)
 
-puts "What calculation would you like to perform?"
+#ask user for input
+puts "What calculation would you like to perform?(Type done when finished)"
 	calculation = gets.chomp.split
-p calculate(calculation[0].to_i, calculation[1], calculation[2].to_i )
-	# def integers(x, y)
-	# 	x.to_i
-	# 	y.to_i
-	# end	
-	# p integers(calculation[0].to_i, calculation(1).to_i)
-	
+	#convert user input to the correct format for calculate method
+	p calculate(calculation[0].to_i, calculation[1], calculation[2].to_i )
+#until loop for as many calculations as user wants, until done is typed
+until  calculation == "done"
+	#ask user for input
+	puts "What calculation would you like to perform?(Type done when finished)"
+	calculation = gets.chomp.split
+	#convert user input to the correct format for calculate method
+	p calculate(calculation[0].to_i, calculation[1], calculation[2].to_i )
+end		
