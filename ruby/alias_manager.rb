@@ -1,31 +1,26 @@
-def reverse_agent_name 
-
-#swap the first and last names
-
-	agent_name.split(" ").reverse!
-end	
 #ask for the agent's name
 puts "Name please:"
-agent_name = gets.chomp
-
-p reverse_agent_name
-
-#split the agent's name into letters 
-letters = reverse_agent_name{|name| name != name.chars}
-p letters
-#method for finding the next letter 
-def next_letter
-#array for vowels
-vowels = "aeiou".chars
-#array for consonants
-	if [letters] == vowels
-		puts vowels.next
-	else
-		puts letters.next
-	end
+def agent_name
+ 	agent_name = gets.chomp
 end
 
-p next_letter
+#swap the first and last names
+reverse_agent_name = agent_name.split(" ").reverse!
+p reverse_agent_name
+#split the agent's name into letters 
+letters = reverse_agent_name.map!{|name| name = name.chars}
+p letters
+# #array for vowels
+# vowels = "aeiou".chars
+# #array for consonants
+# 	if [letters] == vowels
+# 		puts vowels.next
+# 	else
+# 		puts 
+# 	end
+#end
+
+# p next_letter
 
 # consonants = "bcdfghjklmnpqrstvwxyz".chars
 # #method for next vowel
@@ -54,11 +49,13 @@ p next_letter
 
 			
 	
+#next vowel method
+def next_vowel
+	vowels = "aeiou".chars
+	vowels.next
+end	
 
-# next_vowel = vowels.split
-# 	vowels.next
 	
-
 # if agent_name.include?(vowels)
 # 	put next_vowel
 # end
