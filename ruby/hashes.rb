@@ -1,9 +1,9 @@
 #initialize interior_designer hash
 interior_designer = {
-	name:" ",
-	age: " ",
-	children: " ",
-	decor_theme: " " 
+	:name => " ",
+	:age =>" ",
+	:children =>" ",
+	:decor_theme => " " 
 
 }
 puts "What is the client's name?"
@@ -23,3 +23,16 @@ decor = gets.chomp.to_sym
 interior_designer[:decor_theme] = decor.to_sym
 
 p interior_designer
+
+puts "Do you need to make any changes to your answers?(yes/none)"
+changes = gets.chomp
+
+if changes == "yes"
+	puts "What section do you need to make changes to? name; age; children; or decor?"
+	section = gets.chomp.to_sym
+	puts "What would you like to change it to?"
+	answer_change = gets.chomp
+	interior_designer[section] = answer_change.to_sym	
+end	
+
+print interior_designer
