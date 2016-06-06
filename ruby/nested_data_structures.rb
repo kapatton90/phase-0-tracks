@@ -1,15 +1,21 @@
 grocery_store = {
-	"produce" => { 
-		"fruits" => ["apples", "oranges", "watermelon"],
-		"vegetables" => ["lettuce", "cucumber", "onion"]},
-	"meat" => {
-		"pork" => ["bacon", "sausage", "ham"],
-		"chicken" => ["breast", "thighs"],
-		"red meat" =>["steak", "ground hamburger", "beef tips"]},
-	"bakery" => {
-		"bread" => ["baguette", "roll", "loaf"],
-		"sweets" => ["cake", "cupcakes", "cookies"]}
+	"produce" =>[
+		"fruits",
+		"vegetables"],
+	"meat" => [
+		"pork", 
+		"chicken", 
+		"red meat"], 
+	"bakery" => [
+		"bread",
+		"sweets"
+	]
 }
 
-#find cake
-grocery_store["bakery"][1[2]]]
+#find sweets
+p grocery_store["bakery"][0]
+#place herbs in produce
+p grocery_store["produce"].push ("herbs")
+#replace sweets with doughnuts
+p grocery_store["bakery"][1] = "doughnuts"
+#
