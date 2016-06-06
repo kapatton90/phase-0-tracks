@@ -18,4 +18,7 @@ p grocery_store["bakery"][0]
 p grocery_store["produce"].push ("herbs")
 #replace sweets with doughnuts
 p grocery_store["bakery"][1] = "doughnuts"
-#
+#check new bakery item
+p grocery_store["bakery"][1] 
+#insert new bakery category
+p grocery_store["bakery"].insert(2, "cakes")
