@@ -17,11 +17,9 @@ class Santa
 		puts "That was a good #{cookie_type}!"
 	end
 
-
-
-	# def celebrate_birthday=(new_age)
-	# 	new_age = @age += 1
-	# end	
+	def gender=(new_gender)
+		@gender = new_gender
+	end	
 
 	def get_mad_at(reindeer)
 	end
@@ -33,4 +31,6 @@ end
 	
 kris = Santa.new("male", "Germanic")
 p kris.celebrate_birthday
+p kris.celebrate_birthday
+kris.gender = "female"
 santas = []
