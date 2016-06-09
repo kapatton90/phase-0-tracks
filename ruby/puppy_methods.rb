@@ -38,23 +38,31 @@ max.play_dead
 class Kitten
 
 	def initialize
-		puts "Initializing new puppy instance..."
+		puts "Initializing new kitten instance..."
 	end
 	
 	def yarn
 		puts "*rolls ball of yarn around*"
 	end
 	
-	def cat_lives(human_lives)
-		human_lives * 9		
-	end
-	
 	def shows_affection
 		puts "*purr*"
 	end
+
+	def flashlight
+		puts "*follows the flashlight*"
+	end	
 end
 
 kittens_array = []
 
 50.times {kittens_array << Kitten.new }			
-p kittens_array
+
+kittens_array.each{|kitten|kitten.yarn}
+
+kittens_array.each{|kitten|kitten.shows_affection}
+
+kittens_array.each{|kitten|kitten.flashlight}
+
+
+
