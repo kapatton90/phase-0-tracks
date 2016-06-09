@@ -1,12 +1,22 @@
+* {
+  font-family: courier;
+}
 header {
-	background-color: red;
+  background-color: blue;
 }
 .column-1 {
-	background-color: green;
-}
-.column-2 {
-	background-color: blue;
-}
-footer {	
-background-color: yellow;
-}
+  background-color:red;
+  float: left;
+  width: 50%;
+  
+  }
+ .column-2 {
+   background-color: green;
+   float: right;
+   width: 50%;
+   }
+  footer {
+    clear: both;
+    background-color: yellow; 
+  } 
+ 
