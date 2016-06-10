@@ -35,6 +35,7 @@ max.roll_over
 p max.dog_years(23)
 max.play_dead
 
+#Implement Kitten class
 class Kitten
 
 	def initialize
