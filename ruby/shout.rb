@@ -12,20 +12,41 @@
 
 # end
 
-#REMEMBER TO FINISH RELEASE 0
+# Shout.singleton_methods
+# Shout.yell_angrily("Ahhhh")
+# Shout.yell_happily("Yayyyy")
 
+module Shout
+	
+	#Add a method for yelling angrily!!!
+	def yell_angrily(words)
+		words + "!!!"  + " :("
+	end
+
+	#Add a method for yelling happily!!!
+	def yell_happily(words)
+		words + "!!!!!" + ":)"
+	end
+
+end
 
 class Adults
+	def initialize
+	end 
+		
 	include Shout
 end
 
 class Children
+	def initialize
+	end
+		
 	include Shout
 end
 
-parent = Adult.new
-parent.yell_angrily("Clean your room")
+parent = Adults.new
+p parent.yell_angrily("Clean your room")
 
 child = Children.new
-child.yell_happily("Icecream")
+p child.yell_happily("Icecream")
 
