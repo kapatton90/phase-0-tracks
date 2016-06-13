@@ -18,7 +18,7 @@ class Zombie
 		@name = name
 		@life_status = "undead"
 		@physical_condition = "decomposing"
-		@hunger_level = hunger_level
+		@hunger_level = 0
 		#Array for all instances to be put in zombies_array
 		@@zombies_array << self
 	end
@@ -27,8 +27,8 @@ class Zombie
 	def self.eat_brains
 		#Ask how hungry they are to see how much they will want to eat brains
 		puts "How hungry are you on a scale of one to ten?(Ten being the most hungry)"
-		hunger_level = gets.chomp.to_i
-		@hunger_level = hunger_level
+		@hunger_level = gets.chomp.to_i
+
 		#Case statement to decide whether or not to eat brains
 		case @hunger_level
 			
@@ -45,7 +45,7 @@ class Zombie
 	
 	#Create a method for the Thriller
 	def self.dance
-			puts "*#{name} Does Thriller Dance*"	
+			puts "*#{@name} Does Thriller Dance*"	
 	end
 
 	#Create a method for the Zombie walk
@@ -59,38 +59,49 @@ class Zombie
 	end
 end
 
-#Begin zombie experience
-#Get name from user to create their zombie name
-puts "What is your name?"
-name = gets.chomp
+puts "Would you like to try our zombie simulation?(yes/no)"
+simulation = gets.chomp
+	if simulation == "yes"
+			#Begin zombie experience
+			#Get name from user to create their zombie name
+			puts "What is your name?"
+			name = gets.chomp
 
-puts "The zombie virus has spread to your town and you being to worry about becoming infected. You decide to head to Costco for supplies so you can baricade yourself in your home if you need to. You step out the front door and..."
+			puts "The zombie virus has spread to your town and you being to worry about becoming infected. You decide to head to Costco for supplies so you can baricade yourself in your home if you need to. You step out the front door and..."
 
-#Create a new instance of Zombie class with name
-Zombie.new(name)
+			#Create a new instance of Zombie class with name
+			Zombie.new(name)
 
-#Eat brains method for hunger level
-p Zombie.eat_brains
+			#Eat brains method for hunger level
+			p Zombie.eat_brains
 
-#Activate dance method based on user input
-puts "Do you feel like dancing?(yes/no)"
-dance = gets.chomp
-	if dance == "yes"
-		Zombie.dance
+			#Activate dance method based on user input
+			puts "Do you feel like dancing?(yes/no)"
+			dance = gets.chomp
+				if dance == "yes"
+					Zombie.dance
+				else
+					puts "ArRrr, too hungry for dancing, grRrr!!!"
+				end
+
+			puts "Now that you are a zombie, there isn't much to do, other than eat brains of course. Would you like to shuffle or moan?"
+				decision = gets.chomp
+				if decision == "shuffle"
+					puts Zombie.shuffle
+				elsif decision == "moan"
+					puts "How many times would you like to moan?"
+					moan_times = gets.chomp.to_i
+					puts Zombie.moan(moan_times)
+				else
+					puts "No time for nonsense! Need more brains!!!! grRrr"
+				end	
+				#Ask if the user would like to create more instances of the Zombie class
+			puts "Would you like to create another zombie?(yes/no)"
+			more_zombies = gets.chomp
 	else
-		puts "ArRrr, too hungry for dancing, grRrr!!!"
-	end		
+		puts "See you later."		
+	end
+		
 
-puts "Now that you are a zombie, there isn't much to do, other than eat brains of course. Would you like to shuffle or moan?"
-	decision = gets.chomp
-	if decision == "shuffle"
-		puts Zombie.shuffle
-	elsif decision == "moan"
-		puts "How many times would you like to moan?"
-		moan_times = gets.chomp.to_i
-		puts Zombie.moan(moan_times)
-	else
-		puts "No time for nonsense! Need more brains!!!! grRrr"
-	end				
-
-p Zombie.all_instances
+puts "I hope you enjoyed your zombie simulation."	
+p Zombie.all_instances	
