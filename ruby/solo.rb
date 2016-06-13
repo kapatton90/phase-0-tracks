@@ -1,19 +1,21 @@
 #Create a Zombie clas
 class Zombie
-	#Create an array for new zombies
-	#make name readable and writable
-	attr_accessor :name, :hunger_level
-	#Create an initialize method
-	def initialize(name, hunger_range)
-		#Attributes of the Zombie class
-		@name = name
-		#Boolean for life status
-		@life_status = "undead"
+	#Attributes of the class
+	#Boolean for life status
+		@@life_status = "undead"
 			"dead" == false && "alive" == false
 		#String for physical condition
-		@physical_condition = "decomposing"
+		@@physical_condition = "decomposing"
 		#Integer indicating how hungry the zombie is
-		@hunger_level = (0)
+	#Create an array for new zombies
+	#Make name readable and writable
+	attr_accessor :name, :hunger_level
+	#Create an initialize method
+	def initialize(name)
+		puts "#{name} has been recently bitten and is turning into a zombie!!!"
+		#Attributes of each instance of the class
+		
+		@@hunger_level = hunger_level
 	end
 	
 	#Create a method to moan
@@ -22,17 +24,22 @@ class Zombie
 	end
 	
 	#Create a method to eat brains
-	def eat_brains
+	def self.eat_brains
+		#Ask how hungry they are to see how much they will want to eat brains
+		puts "How hungry are you on a scale of one to ten?(Ten being the most hungry)"
+		@@hunger_level = gets.chomp
+
 		#Case statement to decide whether or not to eat brains
 		case @hunger_level
+			
 			when :very_hungry
-				@hunger_level = 10 || 9 || 8 || 7
+				@@hunger_level = 10 || 9 || 8 || 7
 				puts "Raa uURRrRR, need brains!!!"
 			when :hungry 
-				@hunger_level = 6 || 5 || 4
+				@@hunger_level = 6 || 5 || 4
 				puts "Hungry, Ggrr RaaA UrR!"
 			when :kinda_hungry
-				@hunger_level = 3 || 2 || 1
+				@@hunger_level = 3 || 2 || 1
 				puts ""
 			else
 				puts "Not hungry, but will eat brains anyway."			
@@ -53,15 +60,18 @@ class Zombie
 
 end
 
+#Hash for created zombies
+zombies_array = []
+
 #Get name from user to create their zombie name
 puts "What is your name?"
-@name = gets.chomp
+name = gets.chomp
 
-#Ask how hungry they are to see how much they will want to eat brains
-puts "How hungry are you on a scale of one to ten?(Ten being the most hungry)"
-@hunger_level = gets.chomp
+name = Zombie.new(name)
 
-Zombie.new(@name, @hunger_level)
+zombies_array << name
 
-puts "Your zombie name is Raa uRrr #{@name} and you are #{@hunger_level}."
+p zombies_array
+
+#puts "Your zombie name is Raa uRrr #{@name} and you are #{Zombie.eat_brains}."
 
