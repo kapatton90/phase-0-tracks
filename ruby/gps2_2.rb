@@ -61,3 +61,13 @@ def display
 end 
 #test display method
 display
+
+#Comments
+=begin
+Pseudocode definitely helps when you are writing up a first draft of your code. It can help you think through what you will need to do before you start coding.
+Hashes work best for a list like this, since you need both a key and a value. It isn't just a list of grocery items, therefore you need more than just an array.
+A method returns the information you give it in the ways you specified in your method. It takes the argument and uses the code in the body of the method to decide what to do with the argument.
+You can pass strings or integers as arguments to methods.
+You can pass information between methods by defining the variable's scope that you are passing the information between.
+Passing infromation between methods without a class is still somewhat confusing. I am not sure if we did this part of the challenge correctly.
+=end
