@@ -7,6 +7,7 @@ class Santa
 		@age = 0
 
 		puts "Initializing Santa instance ..."
+
 	end	
 
 	def speak
@@ -32,9 +33,14 @@ class Santa
 		@celebrate_birthday = @age += 1
 	end	
 end	
+
+santas = []
+santas << Santa.new(@gender, @ethnicity)
 	
 kris = Santa.new("male", "Germanic")
 p kris.celebrate_birthday
 p kris.celebrate_birthday
 kris.gender = "female"
-p Santa
+
+p santas.each {|santa| p santa}
+
