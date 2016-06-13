@@ -48,10 +48,8 @@ class Zombie
 	end
 
 	#Create a method for the Thriller
-	def dance
-		if dance == "Michael Jackson"
+	def self.dance
 			puts "*Does Thriller Dance*"	
-		end
 	end
 
 end
@@ -70,3 +68,11 @@ zombies_array << name
 p zombies_array
 
 puts Zombie.eat_brains
+
+puts "Do you feel like dancing?(yes/no)"
+dance = gets.chomp
+	if dance == "yes"
+		Zombie.dance
+	else
+		puts "ArRrr, too hungry for dancing, grRrr!!!"
+	end		
