@@ -17,8 +17,8 @@ class Zombie
 	end
 	
 	#Create a method to moan
-	def moan
-
+	def moan(x)
+		x.times{puts "Graagh brains!"}
 	end
 	
 	#Create a method to eat brains
@@ -41,11 +41,14 @@ class Zombie
 
 	#Create a method for the Zombie walk
 	def shuffle
+		puts "*shuffles around aimlessly*"
 	end
 
 	#Create a method for the Thriller
 	def dance
-		thriller
+		if "Michael Jackson"
+			puts "*Does Thriller Dance*"	
+		end
 	end
 
 end
