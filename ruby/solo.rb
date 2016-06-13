@@ -46,12 +46,22 @@ class Zombie
 
 	#Create a method for the Thriller
 	def dance
-		if "Michael Jackson"
+		if dance == "Michael Jackson"
 			puts "*Does Thriller Dance*"	
 		end
 	end
 
 end
 
-p zombie = Zombie.new("Andrew", 7)
-zombie.eat_brains
+#Get name from user to create their zombie name
+puts "What is your name?"
+@name = gets.chomp
+
+#Ask how hungry they are to see how much they will want to eat brains
+puts "How hungry are you on a scale of one to ten?(Ten being the most hungry)"
+@hunger_level = gets.chomp
+
+Zombie.new(@name, @hunger_level)
+
+puts "Your zombie name is Raa uRrr #{@name} and you are #{@hunger_level}."
+
