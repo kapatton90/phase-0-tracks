@@ -1,0 +1,22 @@
+.center{
+	position: absolute;
+	margin: auto;
+	padding: 100px;
+	z-index: -1;
+	display: block;
+
+}
+div.absolute-glasses{
+	position: absolute;
+	margin: auto;
+	display: block;
+	left: 150px;
+	top: 205px;
+}
+div.absolute-hat{
+	position: absolute;
+	margin: auto;
+	display: block;
+	left: 90px;
+	top: 30px;
+	}
