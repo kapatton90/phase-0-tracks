@@ -84,3 +84,20 @@ end
 # alaska.virus_effects
 #=======================================================================
 # Reflection Section
+=begin
+For the initial hash syntax, it is just a normal key and value pairs, 
+except that the values themselves are hashes. The hashes in the values are 
+symbol value pairs. 
+
+Require_relative allows you to load a file that is relative 
+to the file containing the require_relative statement. Require will only load a file 
+that is accessible in your current path. 
+
+Using the .each method is a really good way to iterate through a hash and do
+something with each value of the hash.
+
+While refactoring, we noticed that there were many instance variables and
+that repeating these variables as parameters in each method was redundant and unneccessary.
+
+I think iterating with hashy hashes was most solidified with this challenge. It is not 
+something I have had to do very often yet and it was good practice.
