@@ -9,3 +9,11 @@ horseNames.push("Thunder");
 
 console.log(horseNames);
 
+var newHorse = {name: horseNames, color:horseColors};
+
+for (var index = 0; index < horseNames.length; index++){
+	console.log(horseNames[index])
+}
+
+console.log(newHorse)
+
