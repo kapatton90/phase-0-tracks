@@ -52,6 +52,14 @@ var sameObject = function(object1, object2){
 	}
 };		
 
+//Create a funtion that take an integer for length
+var randomStrarray = funtcion(x){
+	//Variable for array with integer number of strings
+	var randArray = [];
+	randArray.length = x;
+//Returns an array of strings of the given length
+
+}
 
 //Test longestWord function
 console.log(longestWord(phraseArray));
