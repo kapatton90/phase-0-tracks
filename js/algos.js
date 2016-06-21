@@ -18,8 +18,8 @@ var longestWord = function(array){
 			 //Variable changes each time an element is longer
 			 //than the last one
 			 longestElement = array[i];
-		};		
-	};
+		}		
+	}
 	//Return to make sure a value is given back 
 	return longestElement;
 };
@@ -35,25 +35,33 @@ var sameObject = function(object1, object2){
 	//Create a variable for key 2
 	var key2 = object2.key;
 	//Create a variable for value 1
-	var value1 = object1.key(value);
+	var value1 = object1.value;
 	//Create a variable for value 2
-	var value2 = object2.key(value);
+	var value2 = object2.value;
 	//Use a FOR loop to iterate through objects 1 and 2
 	for(var i = 0; i < object1.length; i++){
 		//Use an IF statement to evaulate if the two keys are the same
 		//Us an IF statement to evaluate if the two values are the same
-		if(key1 === key2 && value1 === value2){
+		if(key1 == key2 && value1 == value2){
 			return true;
 		}
-		else{
+		else
+		{
 		return false;	
 		}
 	}
-}		
-
-
-
+};		
 
 
 //Test longestWord function
 console.log(longestWord(phraseArray));
+
+
+//Test sameObject function
+var dog = {animal_type: "pet", noise: "bark",};
+
+var cat = {animal_type: "pet", noise: "bark",};
+
+console.log(sameObject(dog, cat));
+
+
