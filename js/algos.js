@@ -57,6 +57,10 @@ var randomStrarray = funtcion(x){
 	//Variable for array with integer number of strings
 	var randArray = [];
 	randArray.length = x;
+	for(var i = 0; i < x; i++){
+			randArray.push(randomword);
+	}
+	return randArray;
 //Returns an array of strings of the given length
 
 }
