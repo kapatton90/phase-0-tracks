@@ -10,4 +10,6 @@ var reverseString = function(string){
 	return joinString;
 }
 
-console.log(reverseString("Kimberly"));
+if (1 == 1){
+var myReversedString = console.log(reverseString("Kimberly"));
+}
