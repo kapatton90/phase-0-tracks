@@ -17,6 +17,11 @@ get '/students/new' do
   erb :new_student
 end
 
+#Add an ERB template for adding a favorite programming language
+get '/students/language' do
+	erb :favorite_language
+end	
+
 # create new students via
 # a form
 post '/students' do
